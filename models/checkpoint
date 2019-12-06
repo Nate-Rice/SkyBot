@@ -1,2 +1,2 @@
-model_checkpoint_path: "C:\\Users\\Nate\\PycharmProjects\\Chatbot\\models\\model.tflearn"
-all_model_checkpoint_paths: "C:\\Users\\Nate\\PycharmProjects\\Chatbot\\models\\model.tflearn"
+model_checkpoint_path: "C:\\Users\\Nate\\Desktop\\nProjects\\Chatbot\\models\\model.tflearn"
+all_model_checkpoint_paths: "C:\\Users\\Nate\\Desktop\\nProjects\\Chatbot\\models\\model.tflearn"

@@ -84,7 +84,7 @@ class Chatter:
             self.model.load("models/model.tflearn")
         except:
             self.model = tflearn.DNN(n_network)
-            early_stopping_cb = EarlyStoppingCallback(val_acc_thresh=0.997)
+            early_stopping_cb = EarlyStoppingCallback(val_acc_thresh=0.998, val_epoch_thresh=500)
             try:
                 self.model.fit(training, output, n_epoch=2000, batch_size=4, show_metric=True, snapshot_epoch=False,
                                callbacks=early_stopping_cb)
@@ -110,14 +110,18 @@ class Chatter:
         return numpy.array(bag)
 
     def chat(self, user_text):
-        results = self.model.predict([self.bag_of_words(user_text, self.words)])
-        results_index = numpy.argmax(results)
+        probability_results = self.model.predict([self.bag_of_words(user_text, self.words)])[0]
+        results_index = numpy.argmax(probability_results)
         tag = self.labels[results_index]
-        for tg in self.data["intents"]:
-            if tg['tag'] == tag:
-                responses = tg['responses']
 
-        return random.choice(responses)
+        if probability_results[results_index] > 0.5:
+            for tg in self.data["intents"]:
+                if tg['tag'] == tag:
+                    responses = tg['responses']
+
+            return random.choice(responses)
+        else:
+            return "Sorry, I don't understand. Please try a different input."
 
 
 @app.route("/")

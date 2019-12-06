@@ -1,5 +1,6 @@
 <head>
     <link rel="stylesheet" type = "text/css" href = "/static/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -11,15 +12,15 @@
     </center>
 <div class="box"></div>
     <div class="boxed">
-      <div>
+      <div id="screen">
         <div id="chatbox">
           <p class="botText">
             <span>Hi! I'm SkyBot, your personal chat bot.</span>
           </p>
         </div>
         <div id="userInput">
-          <input id="textInput" type="text" name="msg" placeholder="Message" />
-            <!-- <button type = "submit" class = "btn btn-primary">Send</button> -->
+            <input id="textInput" type="text" name="msg" placeholder="Type message..." />
+            <button id="chatButton" type="button" class="btn btn-primary">Send</button>
         </div>
       </div>
     </div>

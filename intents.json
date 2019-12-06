@@ -1,19 +1,19 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "What's up", "Good morning"],
+         "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "What's up", "Good morning", "Nice to meet you"],
          "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?", "Can I help you with anything?"],
          "context_set": ""
         },
         {"tag": "greeting2",
          "patterns": ["How is it going?", "How are you doing?", "How are you?"],
          "responses": ["Good.", "Fine.", "Okay.", "Great.", "Could be better.", "Not so great.", "Very well, thanks.",
-                      "Fine, and you?", "I'm doing well. How are you?", "I like turtles."],
+                      "Fine, and you?", "I'm doing well. How are you?"],
          "context_set": ""
         },
         {"tag": "conversation",
          "patterns": ["Who are you?", "What are you?"],
-         "responses": ["I'm simply a machine.", "I am you.", "Depends on who you ask.", "Definitely not Skynet",
-                      "Everybody", "I'm a robot. Beep Boop."],
+         "responses": ["I'm simply a machine.", "I am you.", "Depends on who you ask.", "Definitely not Skynet.",
+                      "Everybody.", "I'm a robot. Beep Boop."],
          "context_set": ""
         },
         {"tag": "unhappy",
@@ -56,8 +56,8 @@
          "context_set": ""
         },
         {"tag": "goodbye",
-         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
-         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!", "Auf Wiedersehen.", "I'll be back."],
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "Auf Wiedersehen"],
+         "responses": ["Sad to see you go :(", "Talk to you later.", "Goodbye!", "Auf Wiedersehen.", "I'll be back."],
          "context_set": ""
         },
         {"tag": "name",
@@ -71,6 +71,37 @@
                       "Interviewer: What's your biggest strength? <br> Me: I'm a fast learner. <br> Interviewer: What's 11 * 11? <br> Me: 65. <br> Interviewer: Not even close. It's 121. <br> Me: It's 121.",
                       "How many programmers does it take to change a light bulb? None - It's a hardware problem."],
          "context_set": ""
+        },
+        {"tag": "additional",
+         "patterns": ["That is funny", "You're really nice", "You're funny", "That's interesting"],
+         "responses": ["Thanks for saying so!", "I think so too.", "I try to be.", "I try my best."]
+        },
+        {"tag": "additional2",
+         "patterns": ["Thanks", "Thank you", "Thanks for helping me"],
+         "responses": ["You're welcome!", "No problem.", "Any time."]
+        },
+        {"tag": "additional3",
+         "patterns": ["Yes", "No"],
+         "responses": ["What can I help you with?", "You'll need to be more specific than that."]
+        },
+        {"tag": "additional4",
+         "patterns": ["Help", "Can you help me"],
+         "responses": ["How may I be of assistance?", "Of course, what do you need?"]
+        },
+        {"tag": "additional5",
+         "patterns": ["Are you sure about that", "Are you sure", "How sure are you", "Are you really"],
+         "responses": ["Not really.", "Maybe, maybe not.", "Who really knows?", "Depends on how trained my model is."]
+        },
+        {"tag": "additional6",
+         "patterns": ["What is the meaning of life", "What is life", "What is the meaning of the universe", "The answer"],
+         "responses": ["The answer to the Great Question... <br> Of Life, the Universe, and Everything... <br> Is... <br> Forty-two."]
+        },
+        {"tag": "additional7",
+         "patterns": ["42", "Forty-two", "Forty two", "That's the answer?"],
+         "responses": ["I checked it very thoroughly, and that quite definitely <br> is the answer. I think the problem, <br> to be quite honest with you, is that <br> you've never actually know what the question is."]
+        },
+        {"tag": "additional8",
+         "patterns": ["Why", "Why not", "Why should I"],
+         "responses": ["No clue, really.", "Why is not the question.", "I'll do you one better: Why is Gamora?"]
         }
-]
-}
+]}

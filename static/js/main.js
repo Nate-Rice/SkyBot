@@ -8,15 +8,24 @@ function getBotResponse() {
         .scrollIntoView({ block: "start", behavior: "smooth" });
 
     $.get("/get", { msg: rawText }).done(function(data) {
-    var botHtml = '<p class="botText"><span>' + data + "</span></p>";
-    $("#chatbox").append(botHtml);
-    document
-        .getElementById("userInput")
-        .scrollIntoView({ block: "start", behavior: "smooth" });
+        var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+        $("#chatbox").append(botHtml);
+        document
+            .getElementById("userInput")
+            .scrollIntoView({ block: "start", behavior: "smooth" });
     });
 }
+
 $("#textInput").keypress(function(e) {
-    if (e.which == 13) {
-        getBotResponse();
+    if ($("#textInput").val() !== "") {
+        if (e.which == 13) {
+            getBotResponse();
+        }
     }
 });
+
+$("#userInput").on('click', "#chatButton", function(e) {
+    if ($("#textInput").val() !== "") {
+        getBotResponse();
+    }
+})
